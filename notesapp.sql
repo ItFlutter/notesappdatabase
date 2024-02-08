@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2023 at 01:12 AM
+-- Generation Time: Feb 08, 2024 at 09:12 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -48,27 +48,6 @@ INSERT INTO `notes` (`notes_id`, `notes_title`, `notes_note`, `notes_user`, `not
 (32, '', 'Awesome tweets collection', 1, 5, '2023-10-25 21:54:36'),
 (33, '', 'List of free & open source apps', 1, 6, '2023-10-25 21:54:57');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `users_id` int(11) NOT NULL,
-  `users_email` varchar(100) NOT NULL,
-  `users_password` varchar(255) NOT NULL,
-  `users_create` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`users_id`, `users_email`, `users_password`, `users_create`) VALUES
-(1, 'ahmad@gmail.com', 'a53a33601b8dd9d06ae9e50f1f30fbe957aba866', '2023-09-30 14:56:31'),
-(10, 'hazem@gmail.com', '0ec8868506739fbb26c28621369e25a5cdca1dc2', '2023-10-04 06:42:56');
-
 --
 -- Indexes for dumped tables
 --
@@ -81,12 +60,6 @@ ALTER TABLE `notes`
   ADD KEY `notes_user` (`notes_user`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`users_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -95,12 +68,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `notes`
   MODIFY `notes_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
